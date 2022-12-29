@@ -3959,7 +3959,7 @@ function whatDevice ()
 }
 		document.addEventListener("visibilitychange", handleVisibilityChange, false);
 		function handleVisibilityChange() {
-			if (document.visibilityState === "hidden") {
+			if (!mraid.isViewable) {
 				musicBG.volume = 0;
 				swooshSFX.volume = 0;
 				upgradeSFX.volume = 0;
