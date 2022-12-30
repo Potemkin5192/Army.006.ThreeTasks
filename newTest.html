@@ -16,6 +16,7 @@
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script>
 (function (cjs, an) {
+	cjs.RequestUtils.EXTENSION_PATT = /(\w{1,5})(?:;base64,|$)/i;
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
@@ -3998,7 +3999,7 @@ function whatDevice ()
 				}
 			}
 		}
-		
+
 		if (mraid.getState() === 'loading') {
 			mraid.addEventListener('ready', onSdkReady);
 		} else {
